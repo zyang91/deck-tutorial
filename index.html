@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>US County Migration Arcs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- MapLibre CSS -->
+  <link href="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+
+  <!-- Your styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>US County Migration Interactive Map</h1>
+  </header>
+  <div class="info-panel top-left">
+  <div class="info-title">United States County-to-county Migration</div>
+  <div class="info-subtitle">People moving in and out of between 2009–2013</div>
+
+  <div class="legend-wrap">
+    <div id="legend-bar" class="legend-bar" aria-label="Net gain to Net loss scale"></div>
+    <div class="legend-axis">
+      <span>Net gain</span>
+      <span>Net loss</span>
+    </div>
+  </div>
+
+  <div class="info-source">
+    Data source: <a href="https://www.census.gov/topics/population/migration.html" target="_blank" rel="noopener">US Census Bureau</a>
+  </div>
+</div>
+
+  <div id="map"></div>
+  <div class="legend">Click a county to redraw flows. Blue = in-flow, Red = out-flow.</div>
+
+  <!-- Libraries (global UMD builds) -->
+  <script src="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.js"></script>
+  <script src="https://unpkg.com/deck.gl@9.1.11/dist.min.js"></script>
+  <script src="https://unpkg.com/d3@7/dist/d3.min.js"></script>
+
+  <!-- Your app code -->
+  <script src="js/main.js"></script>
+</body>
+</html>
